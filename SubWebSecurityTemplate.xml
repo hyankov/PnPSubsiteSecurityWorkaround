@@ -1,0 +1,20 @@
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.3.1604.0, Culture=neutral, PublicKeyToken=3751622786b357c2" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-XXX">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-XXX" Version="1">
+      <pnp:Security>
+        <pnp:SiteGroups>
+          <pnp:SiteGroup Title="My Group" Owner="SHAREPOINT\system" AllowMembersEditMembership="false" AllowRequestToJoinLeave="false" AutoAcceptRequestToJoinLeave="false" OnlyAllowMembersViewMembership="true" />
+        </pnp:SiteGroups>
+        <pnp:Permissions>
+          <pnp:RoleAssignments>
+            <pnp:RoleAssignment Principal="My Group" RoleDefinition="Full Control" />
+          </pnp:RoleAssignments>
+        </pnp:Permissions>
+      </pnp:Security>
+      <pnp:Providers>
+        <pnp:Provider Enabled="true" HandlerType="My.Assembly.NameSpace.MyClassName, My.Assembly" />
+      </pnp:Providers>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
